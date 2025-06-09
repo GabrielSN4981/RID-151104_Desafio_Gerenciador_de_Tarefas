@@ -1,0 +1,207 @@
+:root {
+    --primary-color: #2D70FD;
+    --primary-hover: #1A4BB8;
+    --text-color: #001747;
+    --text-light: #B1BACB;
+    --disabled-text: #8F98A8;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    background-color: #F5F9FF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+main {
+    background-color: white;
+    border-radius: 2rem;
+    width: 100%;
+    max-width: 40rem;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+h1 {
+    font-family: "Rubik", sans-serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #11175E;
+    margin-bottom: 1.5rem;
+}
+
+#inputs {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.input {
+    flex: 1;
+    padding: 1rem;
+    border: 1px solid #EEEEEE;
+    border-radius: 0.5rem;
+    font-family: "Rubik", sans-serif;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+
+
+.input::placeholder {
+    color: var(--text-light);
+}
+
+#btnAddTask {
+    width: 3rem;
+    height: 3rem;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    color: white;
+}
+
+#btnAddTask:hover {
+    background-color: var(--primary-hover);
+}
+
+.todo-list-section {
+    margin-top: 1rem;
+}
+
+.tasks-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    border: 1px solid #EEEEEE;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.task-name {
+    font-size: 1rem;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.task-name.completed {
+    text-decoration: line-through;
+    color: var(--disabled-text);
+}
+
+.tasks-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.layout-label {
+    padding: 0.25rem 0.75rem;
+    border: 1px solid #EEEEEE;
+    border-radius: 2rem;
+    color: #B1BACB;
+    font-weight: 400;
+}
+
+.task-label {
+    font-size: 0.75rem;
+    color: var(--text-light);
+}
+
+.task-date {
+    font-size: 0.875rem;
+    color: var(--text-light);
+}
+
+.btn-complete {
+    padding: 0.75rem 1.5rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    font-family: "Inter", sans-serif;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-complete:hover {
+    background-color: var(--primary-hover);
+}
+
+#btn-checked {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#btn-checked img {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+footer {
+    margin-top: 1rem;
+}
+
+#task-counter {
+    color: var(--text-light);
+    font-size: 0.875rem;
+}
+
+
+@media (max-width: 768px) {
+    main {
+        padding: 1.5rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+        display: block!important;
+    }
+    
+    #inputs {
+        flex-direction: column;
+    }
+    
+    .input {
+        width: 100%;
+    }
+    
+    #btnAddTask {
+        width: 100%;
+    }
+    
+    .tasks-div {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    
+    .tasks-info {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+}

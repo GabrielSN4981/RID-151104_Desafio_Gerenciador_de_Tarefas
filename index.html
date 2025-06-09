@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+    <title>Gerenciador de Tarefas</title>
+</head>
+
+<body>
+    <main>
+        <h1>Board de Tarefas</h1>
+        <section>
+            <div id="inputs">
+                <input type="text" class="input" placeholder="Nome da Tarefa" id="taskName">
+                <input type="text" class="input" placeholder="Etiqueta" id="taskLabel">
+                <button id="btnAddTask">+</button>
+            </div>
+        </section>
+        <section>
+            <section class="todo-list-section">
+                <ul id="todo-list"></ul>
+            </section>
+        </section>
+        <hr style="border: none; border-top: 1px solid #EEEEEE; margin: 2rem 0 1rem 0;">
+        <footer style="display: flex; justify-content: flex-end;">
+            <p id="task-counter">0 tarefas concluídas</p>
+        </footer>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
